@@ -1,0 +1,9 @@
+# Bloquer l'accès direct à tous les fichiers sauf les fichiers PHP
+<FilesMatch "^(?<!\.php)$">
+    Order deny,allow
+    Deny from all
+</FilesMatch>
+# Rediriger vers la page d'erreur
+ErrorDocument 403  /projetPhp/error/error403.html
+ErrorDocument 404  /projetPhp/error/error404.html
+ErrorDocument 500  /projetPhp/error/error500.html
