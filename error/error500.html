@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Erreur 500</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            width: 100%;
+            margin: 0;
+            height: 100%;
+            background-color: #1d3041;
+            font-family: "Open Sans - Semibold", sans-serif;
+            color: #fff;
+        }
+        .container{
+            width: auto;
+            margin: 75px auto;
+            max-width: 550px;
+            min-height: 100%;
+            background-color: #1d3041;
+            font-family: "Open Sans - Semibold", sans-serif;
+            color: #fff;
+            box-shadow: 0 15px 15px 15px rgba(0,0,0,0.5);
+        }
+        .error {
+            font-size: 100px;
+            color: red;
+        }
+        /*animer le message d'erreur*/
+        .error {
+            animation: error 2s infinite;
+        }
+        @keyframes error {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate3d(10, 25, 25, 15deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="error">Erreur 500</h1>
+            <p>Une erreur interne du serveur est survenue.</p>
+            <p>Si vous êtes l'administrateur du site, veuillez consulter le fichier journal d'erreurs pour plus
+              d'informations.</p>
+            <p>Si vous êtes un utilisateur du site, veuillez contacter l'administrateur du site.</p>
+        </div>
+    </div>
+</div>
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+</body>
+</html>
